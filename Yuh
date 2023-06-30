@@ -1,0 +1,64 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("JSquiggles Universal", "Ocean")
+
+-- Main
+local Movement = Window:NewTab("Movement")
+local Mainsection = Movement:NewSection("Movement")
+
+
+Mainsection:NewSlider("Walkspeed", "Change walk speed value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Mainsection:NewSlider("Jump Power", "Change jump value", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Mainsection:NewButton("Reset WS/JP", "Resets Walkspeed & Jumppower", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+Mainsection:NewButton("Fly(Press E to activate)", "Activates Fly Hack", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/KtLKcbxr"))()
+end)
+
+-- Scripts
+local Scripts = Window:NewTab("Scripts")
+local ScriptsSection = Scripts:NewSection("Admin Panels")
+
+ScriptsSection:NewButton("Infinite Yield", "Activates Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+ScriptsSection:NewButton("CMD X", "Activates CMD X", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+ScriptsSection:NewButton("Fate's Admin", "Activates Fate's Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+
+ScriptsSection:NewButton("Leg Admin V2", "Activates Leg Admin V2", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+end)
+
+ScriptsSection:NewButton("Cheat In Most Games", "Activates Unfair Hub", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
+end)
+
+ScriptsSection:NewButton("curse mode", "Venus Dad Mode", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser", true))({
+        Method = 1, -- Method 1 is the main method. Method two is emojis. Method 3 is full transparency, no special symbols. Method 3 has been improved!
+        Keybind = "F", -- Usually defaulted to F. You can change this keybind by replacing the string with a letter. Works for uppercase and lowercase.
+        ShowMethodDictionary = true -- Shows you the full list of words that you can say with the method. Press FN + F9 to see this dictionary.
+    })
+end)
+
+-- Misc
+local Misc = Window:NewTab("Misc")
+local Miscsection = Misc:NewSection("Misc")
+
+Miscsection:NewButton("Venus Phone Mode", "DO NOT CLICK", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/rouxhaver/scripts-2/main/Extreme%20low%20quality.lua'))()
+end)
